@@ -12,7 +12,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -20,9 +20,16 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            },
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "postcss-loader",
+                ],
+            }
         ],
+    },
+    resolve: {
+        extensions: ["*", ".js", ".jsx"],
     },
     plugins: [
         new HtmlWebpackPlugin({
