@@ -5,7 +5,7 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.join(__dirname, "/dist"),
-        filename: "blog.js",
+        filename: "site.js",
         clean: true,
     },
     devtool: "source-map",
@@ -14,9 +14,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                },
+                use: ["babel-loader"]
             },
             {
                 test: /\.css$/i,
@@ -25,6 +23,10 @@ module.exports = {
                     "css-loader",
                     "postcss-loader",
                 ],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [ "file-loader" ],
             }
         ],
     },
@@ -33,7 +35,13 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "public/index.html",
+            template: path.join(__dirname, "public", "index.html"),
         }),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "build"),
+        },
+        port: 3000,
+    }
 };

@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+html {
+    /*font-family: Helvetica, sans-serif, Arial;*/
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
