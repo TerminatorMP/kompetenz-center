@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Container from "./Container";
 
-const Link = ({children}) => {
+const Link = ({children, href}) => {
     return (
-        <a className="ml-8 text-neutral-300 cursor-pointer hover:text-neutral-100">{children}</a>
+        <a className="ml-8 text-neutral-300 cursor-pointer hover:text-neutral-100" href={href}>{children}</a>
     )
 }
 
@@ -33,9 +33,9 @@ export default function Navbar() {
                 <div className="text-lg font-semibold flex items-center justify-between">
                     <i className={"text-red-600 text-3xl fa-solid fa-fire-flame-curved"}></i>
                     <div>
-                        <Link>Home</Link>
-                        <Link>Leistung</Link>
-                        <Link>Kontakt</Link>
+                        <Link href={"#"}>Home</Link>
+                        <Link href={"#feature"}>Leistung</Link>
+                        <Link href={"#contact"}>Kontakt</Link>
                     </div>
                 </div>
             </Container>

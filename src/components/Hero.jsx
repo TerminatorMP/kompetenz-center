@@ -6,11 +6,11 @@ import ButtonOutlined from "./ButtonOutline";
 export default function Hero() {
     return (
         <div className="bg-neutral-900 relative isolate w-full h-[80vh]">
-            <div className="absolute top-1/3 left-[15%]">
-                <h1 className="mt-10 text-6xl font-bold tracking-tight text-gray-100 sm:text-7xl">
+            <div className="absolute top-1/3 left-[15%] ">
+                <h1 className="text-7xl pad:text-4xl font-bold tracking-tight text-gray-100">
                     Kompetenz Center
                 </h1>
-                <p className="mt-6 text-4xl font-light leading-8 text-gray-300">
+                <p className="mt-6 text-4xl pad:text-2xl font-light leading-8 text-gray-300">
                     Ihr Brandschutzexperte aus Cottbus
                 </p>
                 <div className="mt-12 flex">
@@ -18,8 +18,8 @@ export default function Hero() {
                     <ButtonOutlined clazz="ml-4">Leistungen</ButtonOutlined>
                 </div>
             </div>
-            <div className="absolute top-0 right-0 overflow-hidden z-[-1] h-full w-[60%]">
-                <div className="absolute top-0 right-0 z-10 h-full w-full bg-gradient-to-r from-neutral-900 to-neutral-900/0"/>
+            <div className="absolute top-0 right-0 overflow-hidden z-[-1] h-full w-[60%] phone:w-[90%]">
+                <div className="absolute top-0 right-0 z-10 h-full w-full bg-gradient-to-r from-neutral-900 to-neutral-900/0 phone:to-neutral-900/40"/>
                 <img
                     src={fire}
                     alt="Feuerloescher an der Wand"

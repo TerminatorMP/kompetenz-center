@@ -55,7 +55,7 @@ const Card = ({ icon, name, description, href }) => {
 }
 export default function Feature() {
     return (
-        <div>
+        <div id={"feature"}>
             {/* Header */}
             <div className="relative bg-neutral-900 pb-28 mt-[-1px]">
                 <div className="relative mx-auto max-w-7xl py-24 px-6 sm:py-24 lg:px-8">
@@ -68,7 +68,7 @@ export default function Feature() {
             </div>
 
             {/* Overlapping cards */}
-            <section className="relative z-10 mx-auto -mt-32 max-w-7xl px-6 pb-32 lg:px-8" aria-labelledby="contact-heading">
+            <section className="relative z-10 mx-auto -mt-32 max-w-7xl px-6 pb-12 md:pb-32 lg:px-8" aria-labelledby="contact-heading">
                 <FromTop>
                     <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
                         {supportLinks.map((link) => (

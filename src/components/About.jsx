@@ -11,14 +11,14 @@ import FromRight from "./animation/FromRight";
 
 export default function About() {
     return (
-        <div className="relative isolate m-h-screen">
+        <div id={"about"} className="relative isolate m-h-screen">
             <div className="absolute top-0 left-0 bg-neutral-900 w-full h-1/2 z-[-1]"/>
             <section className="isolate bg-transparent pt-24 pb-24 z-1">
                 <div className="relative pt-24 pb-24">
                     <Container>
                         <FromLeft><HeadingSection>Uber uns</HeadingSection></FromLeft>
-                        <div className="flex items-center justify-center">
-                            <div className="w-[70%] pr-12">
+                        <div className="flex items-center justify-center pad:flex-col">
+                            <div className="w-full w-[70%] pr-12 self-start pad:w-full pad:pr-0">
                                 <div className="mt-4"/>
                                 <FromLeft>
                                     <Text>
@@ -39,7 +39,7 @@ export default function About() {
                                     </Text>
                                 </FromLeft>
                             </div>
-                            <div className="relative w-[40%] h-full isolate">
+                            <div className="relative w-[40%] mt-8 h-full isolate pad:w-[300px]">
                                 <FromRight>
                                     <img src={auto} alt="Firmenwagen" className="w-full h-full rounded-lg z-10"/>
                                     <div

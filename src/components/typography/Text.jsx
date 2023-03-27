@@ -7,7 +7,7 @@ const types = {
 export default function Text({children, type = "dark"}) {
 
     return (
-        <p className={types[type] + " text-lg"}>
+        <p className={types[type] + " text-md md:text-lg"}>
             {children}
         </p>
     )
