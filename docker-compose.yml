@@ -1,11 +1,16 @@
 version: "3.9"
 services:
-  nginx-react:
-    container_name: kompentenz_center
+  kompetenz_center:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - 80:80
+    networks:
+      - sigma_shared_network
+#    ports:
+#      - 12001:2001
     environment:
       NODE_ENV: production
+networks:
+  sigma_shared_network:
+    external: true
+    name: sigma_shared_network
